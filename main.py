@@ -9,6 +9,7 @@ from pencilcase import PencilCase
 from objects import Binder, Notebook, Pen, Highlighter, WritingUtensil
 import sys
 
+
 class Main():
     '''
     Main code for the program

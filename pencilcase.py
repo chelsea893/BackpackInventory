@@ -24,8 +24,13 @@ class PencilCase():
         # self.PENCILCASEITEMS = [Pencil("pencil case"), Pen("black","pencil case"), Pen("green","pencil case"), Pen("red","pencil case"), Pen("blue","pencil case"), Eraser("pencil case"), Highlighter("yellow","pencil case")]
         self.BRAND = BRAND
         self.POSITION = POSITION
+        self.small = False
 
     def getPosition(self):
+        return self.POSITION
+
+    def setPosition(self, NEWPOSITION):
+        self.POSITION = NEWPOSITION
         return self.POSITION
 
     def addItem(self,ITEM):
@@ -42,6 +47,9 @@ class PencilCase():
 
     def getCaseBrand(self):
         return self.BRAND
+
+    def getSize(self):
+        return self.small
 
 if __name__ == "__main__":
     PENCILCASE = PencilCase("yes","here")
