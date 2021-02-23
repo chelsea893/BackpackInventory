@@ -9,7 +9,6 @@ from pencilcase import PencilCase
 from objects import Binder, Notebook, Pen, Highlighter, WritingUtensil
 import sys
 
-
 class Main():
     '''
     Main code for the program
@@ -82,24 +81,28 @@ Locker
                     self.TOTALINVENTORY[MOVE - 1].setPosition("Locker")
                     print(self.LOCKER.getLockObjects())
                     print(self.BACKPACK.getBackpackObjects())
+
                 if self.LOCATIONS[NEWLOCATION -1] == "Locker" and self.TOTALINVENTORY[MOVE - 1].getPosition() == "pencil case":
                     self.LOCKER.addItem(self.TOTALINVENTORY[MOVE - 1])
                     self.PENCILCASE.removeItem(self.PENCILCASE.getObjectsCase().index(self.TOTALINVENTORY[MOVE - 1]))
                     self.TOTALINVENTORY[MOVE - 1].setPosition("Locker")
                     print(self.LOCKER.getLockObjects())
-                    print(self.PENCILCASE.getObjectsCase())
+                    print(self.BACKPACK.getBackpackObjects())
+
                 if self.LOCATIONS[NEWLOCATION -1] == "Backpack" and self.TOTALINVENTORY[MOVE - 1].getPosition() == "pencil case":
                     self.BACKPACK.addItem(self.TOTALINVENTORY[MOVE - 1])
                     self.PENCILCASE.removeItem(self.PENCILCASE.getObjectsCase().index(self.TOTALINVENTORY[MOVE - 1]))
                     self.TOTALINVENTORY[MOVE - 1].setPosition("Backpack")
                     print(self.BACKPACK.getBackpackObjects())
                     print(self.PENCILCASE.getObjectsCase())
+
                 if self.LOCATIONS[NEWLOCATION -1] == "Backpack" and self.TOTALINVENTORY[MOVE - 1].getPosition() == "Locker":
                     self.BACKPACK.addItem(self.TOTALINVENTORY[MOVE - 1])
                     self.LOCKER.removeItem(self.LOCKER.getLockObjects().index(self.TOTALINVENTORY[MOVE - 1]))
                     self.TOTALINVENTORY[MOVE - 1].setPosition("Backpack")
                     print(self.BACKPACK.getBackpackObjects())
                     print(self.LOCKER.getLockObjects())
+
                 if self.LOCATIONS[NEWLOCATION -1] == "pencil case" and self.TOTALINVENTORY[MOVE - 1].getPosition() == "Locker":
                     if self.TOTALINVENTORY[MOVE - 1].getSize() == True:
                         self.PENCILCASE.addItem(self.TOTALINVENTORY[MOVE - 1])
@@ -107,8 +110,8 @@ Locker
                         self.TOTALINVENTORY[MOVE - 1].setPosition("pencil case")
                     else:
                         print("Object can not fit in pencil case")
-                    print(self.PENCILCASE.getObjectsCase())
-                    print(self.LOCKER.getLockObjects())
+                        print(self.PENCILCASE.getObjectsCase())
+                        print(self.LOCKER.getLockObjects())
                 if self.LOCATIONS[NEWLOCATION -1] == "pencil case" and self.TOTALINVENTORY[MOVE - 1].getPosition() == "Backpack":
                     if self.TOTALINVENTORY[MOVE - 1].getSize() == True:
                         self.PENCILCASE.addItem(self.TOTALINVENTORY[MOVE - 1])
@@ -116,8 +119,8 @@ Locker
                         self.TOTALINVENTORY[MOVE - 1].setPosition("pencil case")
                     else:
                         print("Object can not fit in pencil case")
-                    print(self.PENCILCASE.getObjectsCase())
-                    print(self.BACKPACK.getBackpackObjects())
+                        print(self.PENCILCASE.getObjectsCase())
+                        print(self.BACKPACK.getBackpackObjects())
             if CHOICE == 2:
                 for i in range(len(self.OBJECTS)):
                     print(f"{i + 1}) {self.OBJECTS[i]}")
@@ -144,20 +147,6 @@ Locker
                     print(self.LOCKER.getLockObjects())
             if CHOICE == 3:
                 sys.exit()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 if __name__ == "__main__":
