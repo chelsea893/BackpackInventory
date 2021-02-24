@@ -32,6 +32,9 @@ class Locker():
     def getLockObjects(self):
         return self.LOCKERITEMS
 
+    def __repr__(self):
+        return f"Locker"
+
 if __name__ == "__main__":
     rawArr = getRawData('backpack - Sheet1.csv')
     print(rawArr)
