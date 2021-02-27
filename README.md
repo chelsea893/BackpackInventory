@@ -21,4 +21,4 @@ In this program, I used abstraction to set the level of detail needed for each o
 Using aggregation, I grouped objects together based on their location in arrays, so that their location could be accessed and changed.
 
 ### Encapsulation
-For each of the objects, I used setter and getter methods to return/encapsulate what was neccessary for the program to function. For example, for the backpack, locker, and pencil case I created getter methods to return a list of the objects that were in their inventory and for the other objects in objects.py I created getter and setter methods to retrieve and set their location.
+For each of the objects, I used setter and getter methods to encapsulate what was neccessary for the program to function. For example, for the backpack, locker, and pencil case I created getter methods to return a list of the objects that were in their inventory and for the other objects in objects.py I created getter and setter methods to retrieve and set their location.
